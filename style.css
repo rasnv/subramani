@@ -222,7 +222,7 @@ transition:border-color .2s ease;
   .hero-portrait{
       width:min(90vw,380px);
       max-width:none;
-      margin:auto;
+      margin:0;
   }
   .closer-grid{grid-template-columns:repeat(2,1fr);}
 }
