@@ -218,11 +218,18 @@ transition:border-color .2s ease;
 }
 
 @media (max-width:720px){
-  .hero{grid-template-columns:1fr;}
+  .hero{
+    grid-template-columns:1fr;
+  }
+  .hero,
+  .hero-text,
+  .hero-image{
+    min-width:0;      /* stop grid items from overflowing their track */
+  }
   .hero-portrait{
-      width:min(90vw,380px);
+      width:min(90%,380px);  /* was 90vw — now relative to its own container, not the viewport */
       max-width:none;
-      margin:0;
+      margin:0 auto;          /* keep it centered even if flex centering fails */
   }
   .closer-grid{grid-template-columns:repeat(2,1fr);}
 }
